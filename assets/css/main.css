@@ -711,21 +711,33 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
-		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
-		bottom: 0;
-		cursor: default;
-		height: 6em;
-		left: 0;
-		line-height: 8em;
-		position: absolute;
-		text-align: center;
-		width: 100%;
-	}
+#footer {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    line-height: 2em; /* Ajuste para una mejor apariencia responsiva */
+    padding: 1em 0; /* Añade padding para mejorar el espaciado interno */
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 
+    /* Flexbox para centrar contenido vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Media queries para mejorar la responsividad en diferentes tamaños de pantalla */
+    @media (max-width: 600px) {
+        line-height: 1.5em; /* Ajuste de la altura de línea en pantallas pequeñas */
+        padding: 2em 0; /* Aumenta el padding para mejor apariencia en móviles */
+    }
+}
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
